@@ -29,7 +29,7 @@ Create a home directory for environments
 mkdir ~/.envs
 ```
 
-Export this path as `BENV_HOME`
+Export this folder's path as `BENV_HOME`
 
 ```bash
 BENV_HOME=~/.envs
@@ -37,9 +37,9 @@ BENV_HOME=~/.envs
 
 There are four basic functions to call
 
-- **chenv** Activate an existing virtual environment
-- **lsenv** List all existing virtual environments
 - **mkenv** Create a new virtual environment
+- **lsenv** List all existing virtual environments
+- **chenv** Activate an existing virtual environment
 - **rmenv** Remove a virtual environment
 
 ## License

@@ -30,9 +30,11 @@ chenv() {
 # List virtual environments
 lsenv() {
   for i in $(ls -d $BENV_HOME/*/); do
-    env_name=$(basename $i)
-    if [[ ! -z "${VIRTUAL_ENV}" ]] && [[ $env_name == $(basename $VIRTUAL_ENV) ]]; then
-      echo -e "* \e[32m ${env_name}\033[0m"
+    local env_name=$(basename $i)
+    local active=""
+    [[ ! -z "${VIRTUAL_ENV}" ]] && local active=$(basename $VIRTUAL_ENV)
+    if [[ $env_name == $active ]]; then
+      echo -e "* \e[32m${env_name}\033[0m"
     else
       echo "* ${env_name}"
     fi

@@ -31,7 +31,7 @@ chenv() {
 lsenv() {
   for i in $(ls -d $BENV_HOME/*/); do
     env_name=$(basename $i)
-    if [[ $env_name == $(basename $VIRTUAL_ENV) ]]; then
+    if [[ ! -z "${VIRTUAL_ENV}" ]] && [[ $env_name == $(basename $VIRTUAL_ENV) ]]; then
       echo -e "* \e[32m ${env_name}\033[0m"
     else
       echo "* ${env_name}"

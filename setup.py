@@ -1,13 +1,24 @@
-from setuptools import setup
+from setuptools import find_packages, setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
-	name='benv',
-	version='0.1',
-	description='A minimalistic Python virtual environment manager that no one needs',
 	url='https://github.com/burakyilmaz321/benv',
-	author='Burak Yilmaz',
-	author_email='burakyilmaz321@gmail.com',
 	license='MIT',
-	packages=['benv'],
-	zip_safe=False
+    name="benv-burakyilmaz321",
+    version="0.1.1",
+    author="Burak Yilmaz",
+    author_email="burakyilmaz321@gmail.com",
+	description='A minimalistic Python virtual environment manager that no one needs',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    packages=find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Development Status :: 1 - Planning",
+    ],
+    python_requires='>=3.3',
 )

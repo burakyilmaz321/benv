@@ -28,8 +28,8 @@ clean-pyc:
 clean-test:
 	rm -rf .pytest_cache
 
-dist-test: lint test build
+dist-test: clean lint test build
 	python -m twine upload --repository testpypi dist/*
 
-dist: lint test build
+dist: clean lint test build
 	python -m twine upload --repository pypi dist/*

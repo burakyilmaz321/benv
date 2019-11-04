@@ -1,9 +1,12 @@
+"""Test rmenv functionality"""
+
 from click.testing import CliRunner
 
 from benv.cli import rmenv
 
 
 def test_rmenv():
+    """Test rmenv"""
     runner = CliRunner()
     result = runner.invoke(rmenv, ['dummy'])
     assert result.exit_code == 0

@@ -2,6 +2,8 @@
 
 A minimalistic Python virtual environment manager that no one needs.
 
+![](https://github.com/burakyilmaz321/benv/workflows/Python%20package/badge.svg)
+
 ## Requirements
 
 - Python >= 3.3

@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 setup(
     url='https://github.com/burakyilmaz321/benv',
     license='MIT',
-    name="benv-burakyilmaz321",
+    name="benv",
     version="0.1.1",
     author="Burak Yilmaz",
     author_email="burakyilmaz321@gmail.com",

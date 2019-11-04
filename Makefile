@@ -1,10 +1,10 @@
 lint: flake8 pylint
 
 flake8:
-	flake8 --exit-zero --doctests
+	flake8 --doctests
 
 pylint:
-	pylint --exit-zero -f parseable **/*.py
+	pylint -f parseable **/*.py
 
 test:
 	pytest
@@ -27,3 +27,9 @@ clean-pyc:
 
 clean-test:
 	rm -rf .pytest_cache
+
+dist-test: lint test build
+	python -m twine upload --repository testpypi dist/*
+
+dist: lint test build
+	python -m twine upload --repository pypi dist/*

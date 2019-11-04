@@ -5,3 +5,6 @@ flake8:
 
 pylint:
 	pylint --exit-zero -f parseable **/*.py
+
+test:
+	pytest

@@ -24,7 +24,7 @@ setup(
         "Operating System :: OS Independent",
         "Development Status :: 1 - Planning",
     ],
-    python_requires='>=3.3',
+    python_requires='>=3.6',
     entry_points='''
         [console_scripts]
         benv=benv.benv:cli

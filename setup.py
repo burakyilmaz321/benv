@@ -9,7 +9,7 @@ setup(
     url='https://github.com/burakyilmaz321/benv',
     license='MIT',
     name="benv",
-    version="0.1.1",
+    version="0.1.2",
     author="Burak Yilmaz",
     author_email="burakyilmaz321@gmail.com",
     description='A minimalistic Python virtual environment manager'

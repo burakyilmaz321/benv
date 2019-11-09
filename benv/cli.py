@@ -1,7 +1,13 @@
 """Command lina application"""
 
+import os
+
 import click
 
+try:
+    BENV_HOME = os.environ["BENV_HOME"]
+except KeyError:
+    raise KeyError("Cannot find environment variable BENV_HOME")
 
 @click.group()
 def cli():
@@ -25,7 +31,10 @@ def mkenv(env_name):
 @cli.command()
 def lsenv():
     """List environment"""
-    print("Here are some environments")
+    envdir = os.scandir(BENV_HOME)
+    envs = filter(lambda entry: entry.is_dir(), envdir)
+    for env in envs:
+        print("*", env.name)
 
 
 @cli.command()

@@ -27,6 +27,6 @@ setup(
     python_requires='>=3.6',
     entry_points='''
         [console_scripts]
-        benv=benv.benv:cli
+        benv=benv.cli:cli
     ''',
 )

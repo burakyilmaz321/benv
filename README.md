@@ -6,7 +6,7 @@ A minimalistic Python virtual environment manager that no one needs.
 
 ## Requirements
 
-- Python >= 3.3
+- Python >= 3.6
 
 ## Installation
 

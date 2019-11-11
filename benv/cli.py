@@ -7,7 +7,11 @@ import click
 try:
     BENV_HOME = os.environ["BENV_HOME"]
 except KeyError:
-    raise KeyError("Cannot find environment variable BENV_HOME")
+    raise KeyError(
+        "Cannot find environment variable BENV_HOME. "
+        "Please create it like: "
+        "$ export BENV_HOME=~/.envs"
+    )
 
 
 @click.group()

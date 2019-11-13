@@ -6,7 +6,7 @@ flake8:
 pylint:
 	pylint -f parseable **/*.py
 
-test:
+test: test-venv
 	pytest
 
 build:
@@ -33,3 +33,7 @@ dist-test: clean lint test build
 
 dist: clean lint test build
 	python -m twine upload --repository pypi dist/*
+
+test-venv:
+	python -m venv ${BENV_HOME}/venv_1
+	python -m venv ${BENV_HOME}/venv_2

@@ -10,4 +10,4 @@ def test_lsenv():
     runner = CliRunner()
     result = runner.invoke(lsenv)
     assert result.exit_code == 0
-    assert result.output == "Here are some environments\n"
+    assert result.output == "* venv_1\n* venv_2\n"

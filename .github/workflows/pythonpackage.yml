@@ -24,7 +24,8 @@ jobs:
         pip install -r build-requirements.txt
     - name: Lint with flake8
       run: |
-        make test
+        make lint
     - name: Test with pytest
       run: |
+        export BENV_HOME=~/.envs
         make test

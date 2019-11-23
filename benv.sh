@@ -18,6 +18,10 @@
 #   Remove a virtual environment
 #
 
+# Colors
+GREEN="\033[1;32m"
+RESET="\033[0;0m"
+
 # Remove all white spaces
 remove_whitespaces() {
   echo $1 | sed "s# ##g"
@@ -40,7 +44,7 @@ lsenv() {
     local active=""
     [[ ! -z "${VIRTUAL_ENV}" ]] && local active=$(basename $VIRTUAL_ENV)
     if [[ $env_name == $active ]]; then
-      echo -e "* \e[32m${env_name}\033[0m"
+      echo -e "* ${GREEN}${env_name}${RESET}"
     else
       echo "* ${env_name}"
     fi

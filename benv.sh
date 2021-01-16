@@ -70,7 +70,7 @@ rmenv() {
     if [[ $env_name == "" ]]; then
       echo "Env name cannot be empty"
     else
-      rm $BENV_HOME/$env_name -r
+      rm -r $BENV_HOME/$env_name
     fi
   fi
 }
